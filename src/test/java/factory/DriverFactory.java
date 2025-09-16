@@ -20,11 +20,8 @@ public class DriverFactory {
 	public static WebDriver initilizeBrowser(String browserName) {
 		
 		if(browserName.equalsIgnoreCase("chrome")) {
-			// driver = new ChromeDriver();
-			driver = new RemoteWebDriver(
-	    new URL("http://localhost:4444/wd/hub"), 
-	    new ChromeOptions()
-	);
+			driver = new ChromeDriver();
+
 		}else if(browserName.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();	
 		}
